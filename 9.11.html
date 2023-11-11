@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(31, 208, 31);
+        margin-top: 3%;
+        border-radius: 5px;
+        width: 30%;
+        padding: 2% 3% 3% 3%;
+    }
+
+    .input {
+        border: 2px solid white;
+        background-color: rgb(115, 214, 115);
+        margin-top: 1%;
+        border-radius: 5px;
+        padding: 3%;
+
+    }
+
+    #inp {
+        margin-left: 35%;
+        width: 45%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .input-adress {
+        border: 2px solid white;
+        background-color: rgb(115, 214, 115);
+        height: 6em;
+        margin-top: 1%;
+        border-radius: 5px;
+        padding: 3%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    #inp-adress {
+        margin-left: 35%;
+        width: 45%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .step {
+        margin-top: 4%;
+    }
+
+    #rad{
+        margin-left: 10%;
+    }
+
+    #sub{
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 50px;
+        background-color: rgb(25, 25, 25);
+        border-radius: 50px;
+        color: white;
+    }
+
+    .buy{
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form method="get">
+        <div>
+            <h2 style="margin-top: 0%;">Step 1: Your details</h2>
+            <div class="input">
+                <span>Name</span>
+                <label>
+                    <input type="text" id="inp" placeholder="First name and last name" pattern="[A-Za-z]+"
+                        maxlength="30">
+                </label>
+            </div>
+            <div class="input">
+                <span>Email</span>
+                <label>
+                    <input type="email" id="inp" placeholder="example@domain.com" maxlength="30">
+                </label>
+            </div>
+            <div class="input">
+                <span>Phone</span>
+                <label>
+                    <input type="text" id="inp" placeholder="Eg. +447500000000" maxlength="30" pattern="\+[0-9]+" />
+                </label>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2 style="margin-top: 0%;">Step 2: Delivery adress</h2>
+            <div class="input-adress">
+                <span>Adress</span>
+                <textarea name="comment" minlength="2" maxlength="100" id="inp-adress"></textarea>
+            </div>
+            <div class="input">
+                <span>Post code</span>
+                <label>
+                    <input type="text" id="inp" maxlength="4" pattern="[0-9]+" style="margin-left: 33%;"/>
+                </label>
+            </div>
+            <div class="input">
+                <span>Country</span>
+                <label>
+                    <input type="text" id="inp" maxlength="10" pattern="[A-Za-z]+" />
+                </label>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2 style="margin-top: 0%;">Step 3: Delivery adress</h2>
+            <div class="input">
+                <p>Card type</p>
+                <div>
+                    <input type="radio" name="test" id="rad">
+                    <span>VISA</span>
+                    <input type="radio" name="test" id="rad">
+                    <span>AmEx</span>
+                    <input type="radio" name="test" id="rad">
+                    <span>Mastercard</span>
+                </div>
+            </div>
+            <div class="input">
+                <span>Card number</span>
+                <label>
+                    <input type="text" id="inp" maxlength="12" pattern="[0-9]+" style="margin-left: 26%;"/>
+                </label>
+            </div>
+            <div class="input">
+                <span>Security code</span>
+                <label>
+                    <input type="text" id="inp" maxlength="12" pattern="[0-9]+" style="margin-left: 25%;"/>
+                </label>
+            </div>
+            <div class="input">
+                <span>Name on card</span>
+                <label>
+                    <input type="text" id="inp" placeholder="Exact name as on the card" pattern="[A-Za-z]+"
+                        maxlength="30" style="margin-left: 25%;">
+                </label>
+            </div>
+            <div class="buy">
+                <input type="submit" value="BUY IT!" id="sub"/>
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+</body>
+
+</html>
